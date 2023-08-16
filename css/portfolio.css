@@ -1,0 +1,313 @@
+/* GENERAL STYLE */
+
+/* Green colors are based off the navbar's #096920 */
+
+@keyframes fadein { /* fade in animation for navbar and title */ 
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+Body {
+    background-color: #096920;
+    margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+
+}
+
+q {
+    font-style: italic;
+}
+
+a {
+    color: blue;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: 280px;
+    display: block;
+    margin: auto;
+}
+
+img:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+footer {
+    padding: 1%;
+    z-index: 0;
+}
+
+
+.bar { /* Spacer to put a buffer between the video and columns */
+    padding:10px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    background-color: #096920;
+    background-position: 0% 25%;
+    border: 2px;
+}
+
+/* NAVBAR */
+
+.navbar { /* navbar itself*/
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: relative;
+    background-color: #096920;
+}
+
+.navbar a { /* links on the navbar */
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    text-decoration: none; /* removes link underline */
+    top: 50%;
+    float: left;
+    padding: 10px 15px;
+}
+
+.navhome { /* animation duration */ 
+    animation: fadein 4s;
+    animation-fill-mode: forwards;
+}
+
+.navabout { /* animation start and duration */ 
+    animation-name: fadein;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.navgithub { /* animation start and duration */ 
+    animation-name: fadein;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.navcantina { /* animation start and duration */ 
+    animation-name: fadein;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.navcontact { /* animation start and duration */ 
+    animation-name: fadein;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.navbar a:hover { /* hover effect for links */
+    color: black;
+    background-color: #9cc3a5;
+}
+
+@media screen and (max-width: 501px) { /* shrinks link font size on small resolution screens */
+    .navbar a {
+        font-size: 16px;
+    }
+}
+
+
+
+/* VIDEO STYLING */
+
+.videowrapper {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 280px;
+    border: 1px solid rgba(0, 0, 0, 0.);
+    overflow: hidden;
+}
+
+#networkvideo { /* Positioning for video */
+    position: relative;
+    display: block;
+    top: -80%; /* sets video just above the browser, centering the video effect better around the text and not taking up as much space */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1; 
+}
+
+.videotext { /* Positioning for text over video */
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+@media screen and (max-width: 576px) { /* Hides viceo on small resolution screens */
+    #networkvideo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .videotext {
+        overflow: auto;
+    }
+}
+
+/* TABLE STYLING*/
+
+* {
+    box-sizing: border-box;
+}
+
+.column1 {
+    position: relative;
+    float: left;
+    display: grid;
+    place-items: center;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1%;
+    height: 350px;
+    background-color: #529662;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1100px) {
+    .column1 {
+        overflow: auto;
+    }
+}
+
+.column2 {
+    position: relative;
+    float: left;
+    display: grid;
+    place-items: center;
+    width: 50%;
+    padding: 10px;
+    padding-top: .5%;
+    height: 350px;
+    background-color: #096920;
+    z-index: 1;
+}
+
+.columntall {
+    padding-top: 3.5%;
+    height: 500px;
+}
+
+.whitebox {
+    background: #f3f3de;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.title {
+    position: relative;
+    background: #096920;
+    margin: auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+
+/* CONTACT FORM STYLING */
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Hover effects for input boxes */
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: #096920;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white; /* Turns the background of the submit button white when the user hovers over it */
+    color: black; /* Turns the font black when hovered over */
+    transform: scale(1.2); /* Makes the button increase 1.5 times in size */
+    transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
+}
+
+form {
+    border-radius: 5px; 
+    background-color: #f2f2f2; 
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

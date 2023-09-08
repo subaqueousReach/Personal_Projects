@@ -242,15 +242,22 @@ footer {
     z-index: 1;
 }
 
-.columntall {
-    padding-top: 3.5%;
-    height: 500px;
+@media screen and (max-width: 576px) {
+    .column1 {
+        display: block;
+        width: 100%;
+    }
+    .column2 {
+        display:none;
+    }
 }
 
 .whitebox {
     background: #f3f3de;
     margin: auto;
-    padding: 15px;
+    width: 100%;
+    min-height: 260px;
+    padding: 20px;
     border-radius: 15px;
 }
 

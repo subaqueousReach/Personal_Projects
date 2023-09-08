@@ -138,6 +138,13 @@ footer {
     animation-fill-mode: forwards;
 }
 
+.navcontact{ /* animation start and duration */ 
+    animation-name: fadein;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
 .navbar a:hover { /* hover effect for links */
     color: black;
     background-color: #9cc3a5;

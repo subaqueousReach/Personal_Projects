@@ -16,7 +16,6 @@
             <a class="navabout" href="#about">About</a>
             <a class="navgithub" href="#github">GitHub</a>
             <a class="navcantina" href="#cantina">Cantina XIII</a>
-            <a class="navcontact" href="#contact">Contact</a>
         </div>
 
         <br>
@@ -68,7 +67,6 @@
                     <br> I'm a graduate of <a href="https://github.com/subaqueousReach" target="_blank">The Tech Academy</a>'s Software Development Bootcamp through the Academy of Learning, and have been trained in the following programming languages: HTML, CSS, Javascript, Python, and more.
                     <br>
                     <br>I am a passionate full-stack developer and would be thrilled to hear about your project!
-                    <br>Feel free to <a href="#contact">contact</a> me below!
                 </p>
             </div>
         </div>
@@ -116,32 +114,38 @@
             
         </div>
 
-        <!-- CONTACT SECTION -->
-        <div class="row" id="contact">
-           <!-- LEFT COLUMN -->
-            <div class="column1 columntall">
-                <h1 class="title">Contact</h1>
-                <form action="https://formspree.io/f/mleyjbyd" method="POST" class="whitebox"> 
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="SUBMIT">
+        <!-- CONTACT FORM -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mleyjbyd" method="POST"> 
+                    <h1 style="color: black">Contact</h1>
+                    <div  style="float: right;">
+                        <img class="bigimg" src="./images/contact.png" alt="contact_image">
+                    </div>
+                    <div  style="display: block; float: left;">
+                        <label>Name:</label>
+                            <input type="text" name="Name" placeholder="Please enter your name here"><br>
+                        <label>Phone:</label>
+                            <input type="text" name="Phone" placeholder="Please enter your phone number here"><br>
+                        <label>Email:</label>
+                            <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required><br>
+                        <label>Message:</label>
+                            <input type="text" id="Message" name="Message" placeholder="Please write your message here"><br>
+                        <input type="submit" value="SUBMIT"><nobr>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                    </div>
                 </form>
-            </div>
-        <!-- RIGHT COLUMN -->
-            <div class="column2 columntall">
-                <img class="bigimg" src="./images/contact.png" alt="contact_image">
             </div>
         </div>
 
         <!-- FOOTER SECTION -->
         <footer>
             <p>
-                <p class="center" style="color: white; margin: auto;">&copy Rhys Elkin 2023</p>
+                <p class="center" style="color: white; margin: auto;">&copy; Rhys Elkin 2023</p>
             </p>
         </footer>
+
+        <script src="js/portfolio.js"></script>
     </body>
 </html>
